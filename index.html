@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+    <title>drinks</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Product Sans;
+    }
+
+    html,
+    body {
+        height: 100%;
+        width: 100%;
+    }
+
+    body::-webkit-scrollbar {
+        display: none;
+    }
+
+    #main {
+        width: 100%;
+        height: 100vh;
+        background-color: rgb(213, 64, 14);
+    }
+
+    nav {
+        position: fixed;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        height: 10vh;
+        padding: 0vw 10vw;
+        z-index: 99;
+    }
+
+    nav a,
+    i {
+        font-size: 1.2vw;
+        text-decoration: none;
+
+        color: white;
+    }
+
+    .cntr-nav {
+        display: flex;
+        gap: 3vw;
+    }
+
+    nav i {
+        font-size: 2.5 vw;
+    }
+
+    .one {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100vh;
+        background: linear-gradient(rgb(189, 54, 5), rgb(50, 43, 243));
+    }
+
+    #cola {
+        width: 28%;
+        height:70%;
+        position: absolute;
+        margin-left: 50px;
+        margin-top: 30px;
+        z-index: 1;
+        transition: all cubic-bezier(0.19, 1, 0.22, 1)0.5s;
+    }
+
+    #lmn {
+        width: 10%;
+        position: absolute;
+        top: 15%;
+        left: 38%;
+        transition: all cubic-bezier(0.19, 1, 0.22, 1)0.5s;
+    }
+
+    #leaf {
+        width: 15%;
+        position: absolute;
+        top: 8.5%;
+        right: 69%;
+        transition: all cubic-bezier(0.19, 1, 0.22, 1)0.5s;
+    }
+
+    #ice {
+        width: 15%;
+        position: absolute;
+        top: 68%;
+        right: 35%;
+        z-index: 1;
+        transition: all cubic-bezier(0.19, 1, 0.22, 1)0.5s;
+
+    }
+
+    #apple {
+        width: 25%;
+        position: absolute;
+        top: 0.5%;
+        right: 30%;
+        transition: all cubic-bezier(0.19, 1, 0.22, 1)0.5s;
+    }
+
+    #title {
+        font-size: 20vw;
+        font-family: Product Sans Bold;
+        color: #fff;
+        z-index: 1;
+    }
+
+    .two {
+        width: 100%;
+        height: 100vh;
+        background-color: rgb(132, 0, 0);
+        display: flex;
+
+    }
+
+    .lfttwo,
+    .rghtwo {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+        gap: 5vh;
+        width: 50%;
+        height: 100%;
+    }
+
+    .lfttwo svg {
+        transform: rotateX(40deg);
+        width: 40%;
+        height: 50%;
+        margin-top: 60%;
+    }
+
+    .rghtwo h1 {
+        color: aliceblue;
+        font-size: 10vh;
+    }
+
+    .rghtwo p {
+        color: aliceblue;
+        font-size: 2.5vh;
+        width: 80%;
+    }
+
+    .lfttwo,
+    .rghtwo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 2vh;
+        width: 25vw;
+        height: 70vh;
+        margin-top: 10vh;
+        border-radius: 20px;
+        background-color: #fff;
+    }
+
+
+    .three {
+        display: flex;
+        gap: 3vw;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100vh;
+        background: linear-gradient(rgb(189, 54, 5), rgb(238, 5, 5));
+    }
+
+    .card h1 {
+        font-size: 6vh;
+
+    }
+
+    .card button {
+        padding: 1vw 2vw;
+        border-radius: 30px;
+        font-size: 1vw;
+        background-color: rgb(254, 136, 1);
+        cursor: pointer;
+        margin-bottom: 35%;
+        border: none;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #kiwi {
+        position: absolute;
+        width: 220px;
+        height: 200px;
+        margin-bottom: 140%;
+    }
+
+    #sprite img {
+        margin-bottom: 20px;
+    }
+
+    #sprite {
+        z-index: 1;
+        margin-bottom: 20%;
+        position: absolute;
+    }
+
+    #spri {
+        background-color: rgb(3, 141, 35);
+
+    }
+
+    #coca h1 {
+        margin-top: 90%;
+    }
+
+    #monster {
+        z-index: 1;
+        margin-bottom: 20%;
+    }
+#coca{
+    background-color: rgb(135, 3, 3);
+}
+    #mons {
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        margin-bottom: 140%;
+    }
+
+    #mon {
+        background-color: yellow;
+    }
+
+    #monster button {
+        align-items: center;
+        justify-content: center;
+        margin-left: 30%;
+    }
+
+    #monster h1 {
+        margin-left: 13%;
+        padding-top: 10%;
+    }
+
+    #sprite button {
+        align-items: center;
+        justify-content: center;
+        margin-left: 13%;
+        margin-bottom: 20%;
+    }
+
+    #sprite h1 {
+        margin-bottom: 9px;
+    }
+
+    #monster img {
+        margin-top: 20%;
+    }
+</style>
+
+<body>
+    <div id="main">
+        <nav>
+            <a href="#">Logo</a>
+            <div class="cntr-nav">
+                <a href="#">Home</a>
+                <a href="#">Products</a>
+                <a href="#">Shop</a>
+                <a href="#">Contact</a>
+            </div>
+            <i class="ri-menu-fill"></i>
+        </nav>
+        <div class="one">
+            <h1 id="title">Coca-Cola</h1>
+            <img id="lmn" src="droplet.png" alt="" width="100" height="260">
+            <img id="cola" src="coco.png" alt="" width="500" height="500">
+            <img id="apple" src="apple.png" alt="" width="550" height="300">
+            <img id="leaf" src="leaf1.png" alt="">
+            <img id="ice" src="ice.png" alt="">
+        </div>
+        <div class="two">
+            <div class="lfttwo">
+                <!-- <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                    <path fill="#FA4D56" d="M55.2,-63.9C67.9,-55.1,72.1,-34.3,75,-13.9C77.8,6.5,79.1,26.5,70.2,39.1C61.2,51.6,41.9,56.8,23.5,62.6C5.2,68.5,-12.2,75,-28.3,71.7C-44.3,68.5,-59,55.5,-68.9,39.3C-78.7,23.1,-83.8,3.7,-78.5,-11.7C-73.2,-27.1,-57.6,-38.6,-42.8,-47.1C-28,-55.6,-14,-61.2,3.6,-65.5C21.2,-69.8,42.4,-72.8,55.2,-63.9Z" transform="translate(100 100)" />
+                  </svg> -->
+            </div>
+            <div class="rghtwo">
+                <h1>Flavours updated</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa ratione corrupti aut tenetur sed!
+                    Perferendis ipsam odit similique, corporis illo tempora ut voluptatem iste maiores. Soluta alias
+                    numquam omnis Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus minima eaque
+                    ab iste dolorem, veniam atque accusamus earum corrupti, magnam facere quis, tempore quidem?
+                    Repudiandae cum voluptatem aliquid possimus veritatis?</voluptatum>
+                </p>
+            </div>
+        </div>
+        <div class="three">
+            <div class="card" id="spri">
+                <img id="kiwi" src="kiwi.png" alt="" height="500" width="250">
+                <div id="sprite"> <img src="sprite.png" alt="" height="300" width="150">
+                    <h1>SPRITE</h1>
+                    <button>Buy Now</button>
+                </div>
+            </div>
+
+            <div class="card" id="coca">
+                <h1>COCA-COLA</h1>
+                <button>Buy Now</button>
+            </div>
+            <div class="card" id="mon">
+                <img id="mons" src="lemon.png" alt="" height="500" width="250">
+                <div id="monster"> <img src="monster.png" alt="" height="280" width="320">
+                    <h1>MONSTER</h1>
+                    <button>Buy Now</button>
+                </div>
+            </div>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+            integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+            integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script>var tl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: ".two",
+                    start: "0% 95%",
+                    end: "50% 50%",
+                    scrub: true,
+                    // markers: true,
+                }
+            })
+            tl.to("#cola", {
+                height:"70%",
+                top: "110%",
+                left: "8%"
+            }, 'leaf')
+            tl.to("#leaf", {
+                top: "120%",
+                rotate: "180deg",
+                left: "47%"
+            }, 'leaf')
+            tl.to("#ice", {
+                width: "15%",
+                top: "165%",
+                right: "2%"
+            }, 'leaf')
+            tl.to("#lmn", {
+                top: "105%",
+                left: "25%",
+                rotate:"5%"
+            }, 'leaf')
+            tl.to("#apple", {
+                top: "150%",
+                width: "20%",
+                left: "22%",
+            }, 'leaf')
+
+            var tl2 = gsap.timeline({scrollTrigger:{
+    trigger: ".three",
+    start: "0% 95%",
+    end: "50% 50%",
+    scrub: true,
+    markers: true,
+}})
+tl2.from("#kiwi",{
+    rotate: "-90deg",
+    left: "-100%",
+    top: "110%"
+}, 'apple')
+tl2.from("#sprite",{
+    rotate: "-90deg",
+    left: "-100%",
+    top: "110%"
+}, 'apple')
+tl2.from("#mons",{
+    rotate: "90deg",
+    right: "-100%",
+    top: "110%"
+}, 'apple')
+tl2.from("#monster",{
+    rotate: "90deg",
+    right: "-100%",
+    top: "110%"
+}, 'apple')
+tl2.to("#cola",{
+    top: "210%",
+    left: "33%",
+    height:"50%"
+    
+}, 'apple')
+tl2.to("#apple",{
+    width:"30%",
+    left: "35%",
+    top: "199%"
+}, 'apple')
+        </script>
+</body>
+
+</html>
