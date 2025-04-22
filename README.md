@@ -1,4 +1,4 @@
-# 🥤 Drinkify – Sip in Style
+#  Drinkify – Sip in Style
 
 **Drinkify** is a visually immersive and modern website dedicated to showcasing a wide variety of refreshing beverages. Built using **HTML**, **CSS**, and **JavaScript**, the site blends aesthetics with smooth interactions to give users a delightful browsing experience — whether they're thirsty for info or just inspiration!
 
